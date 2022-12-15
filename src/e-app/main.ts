@@ -38,10 +38,7 @@ const autostartLocation = path.join(os.homedir(), '.config/autostart');
 const autostartDesktopFilename = 'tuxedo-control-center-tray.desktop';
 const tccConfigDir = path.join(os.homedir(), '.tcc');
 const tccStandardConfigFile = path.join(tccConfigDir, 'user.conf');
-const availableLanguages = [
-    'en',
-    'de'
-];
+const availableLanguages = ['en', 'de', 'fr'];
 const translation = new NgTranslations();
 let startTCCAccelerator;
 

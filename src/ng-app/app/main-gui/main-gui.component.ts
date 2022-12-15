@@ -115,14 +115,19 @@ export class MainGuiComponent implements OnInit, OnDestroy {
         return this.utils.getLanguageData(langId);
     }
 
-    public buttonToggleLanguage() {
-        this.electron.ipcRenderer.send("close-webcam-preview");
-        this.utils.changeLanguage(this.utils.getLanguagesMenuArray().find(lang => lang.id !== this.utils.getCurrentLanguageId()).id);
+    public buttonCycleLanguage():void  {
+        let curLangIndex: number = this.utils.getLanguagesMenuArray().findIndex(lang => lang.id === this.utils.getCurrentLanguageId())
+        let newLangIndex: number = (curLangIndex + 1) % this.utils.getLanguagesMenuArray().length
+        let newLangID: string = this.utils.getLanguagesMenuArray()[newLangIndex].id
+        this.utils.changeLanguage(newLangID);
         this.updateLanguageName();
     }
 
     public updateLanguageName(): void {
-        this.buttonLanguageLabel = this.utils.getLanguagesMenuArray().find(lang => lang.id !== this.utils.getCurrentLanguageId()).label;
+        let curLangIndex: number = this.utils.getLanguagesMenuArray().findIndex(lang => lang.id === this.utils.getCurrentLanguageId())
+        let nextLangIndex: number = (curLangIndex + 1) % this.utils.getLanguagesMenuArray().length
+        let nextLangLabel: string = this.utils.getLanguagesMenuArray()[nextLangIndex].label
+        this.buttonLanguageLabel = nextLangLabel;
     }
 
     public getStateInputs(): IStateInfo[] {
