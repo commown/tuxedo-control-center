@@ -69,9 +69,13 @@ export class TccTray {
         const chassisVendor = dmi.chassisVendor.readValueNT();
         const sysVendor = dmi.sysVendor.readValueNT();
         let showAquarisMenu;
-        const isTuxedo = (boardVendor !== undefined && boardVendor.toLowerCase().includes('tuxedo')) ||
-                         (chassisVendor !== undefined && chassisVendor.toLowerCase().includes('tuxedo')) ||
-                         (sysVendor !== undefined && sysVendor.toLowerCase().includes('tuxedo'));
+        const isTuxedo =
+            (boardVendor !== undefined && boardVendor.toLowerCase().includes('whyopencomputing')) ||
+            (boardVendor !== undefined && boardVendor.toLowerCase().includes('tuxedo')) ||
+            (chassisVendor !== undefined && chassisVendor.toLowerCase().includes('whyopencomputing')) ||
+            (chassisVendor !== undefined && chassisVendor.toLowerCase().includes('tuxedo')) ||
+            (sysVendor !== undefined && sysVendor.toLowerCase().includes('whyopencomputing')) ||
+            (sysVendor !== undefined && sysVendor.toLowerCase().includes('tuxedo'));
 
         if (isTuxedo) {
             if (deviceName !== undefined &&

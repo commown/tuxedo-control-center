@@ -44,10 +44,16 @@ export class CompatibilityService {
         const isTuxedo =
             (boardVendor !== undefined &&
                 boardVendor.toLowerCase().includes("tuxedo")) ||
+            (boardVendor !== undefined &&
+                boardVendor.toLowerCase().includes("whyopencomputing")) ||
             (chassisVendor !== undefined &&
                 chassisVendor.toLowerCase().includes("tuxedo")) ||
+            (chassisVendor !== undefined &&
+                chassisVendor.toLowerCase().includes("whyopencomputing")) ||
             (sysVendor !== undefined &&
-                sysVendor.toLowerCase().includes("tuxedo"));
+                sysVendor.toLowerCase().includes("tuxedo")) ||
+            (sysVendor !== undefined &&
+                sysVendor.toLowerCase().includes("whyopencomputing"));
 
         if (isTuxedo) {
             if (
