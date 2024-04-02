@@ -71,10 +71,13 @@ export class TccTray {
         let showAquarisMenu;
         const isTuxedo =
             (boardVendor !== undefined && boardVendor.toLowerCase().includes('whyopencomputing')) ||
+            (boardVendor !== undefined && boardVendor.toLowerCase().includes('pcspecialist')) ||
             (boardVendor !== undefined && boardVendor.toLowerCase().includes('tuxedo')) ||
             (chassisVendor !== undefined && chassisVendor.toLowerCase().includes('whyopencomputing')) ||
+            (chassisVendor !== undefined && chassisVendor.toLowerCase().includes('pcspecialist')) ||
             (chassisVendor !== undefined && chassisVendor.toLowerCase().includes('tuxedo')) ||
             (sysVendor !== undefined && sysVendor.toLowerCase().includes('whyopencomputing')) ||
+            (sysVendor !== undefined && sysVendor.toLowerCase().includes('pcspecialist')) ||
             (sysVendor !== undefined && sysVendor.toLowerCase().includes('tuxedo'));
 
         if (isTuxedo) {
