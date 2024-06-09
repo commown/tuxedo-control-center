@@ -20,11 +20,12 @@
 import * as fs from 'fs';
 import * as dbus from 'dbus-next';
 
+import { DaemonListener } from "./DaemonListener";
 import { TuxedoControlCenterDaemon } from './TuxedoControlCenterDaemon';
 import { KeyboardBacklightColorModes, KeyboardBacklightCapabilitiesInterface, KeyboardBacklightStateInterface } from '../../common/models/TccSettings';
 import { fileOK, fileOKAsync, getDirectories, getSymbolicLinks } from '../../common/classes/Utils';
 
-export class KeyboardBacklightListener {
+export class KeyboardBacklightListener extends DaemonListener {
     protected ledsWhiteOnly: string = "/sys/devices/platform/tuxedo_keyboard/leds/white:kbd_backlight";
     protected ledsWhiteOnlyNB05: string = "/sys/bus/platform/devices/tuxedo_nb05_kbd_backlight/leds/white:kbd_backlight";
     protected ledsRGBZones: Array<string> = ["/sys/devices/platform/tuxedo_keyboard/leds/rgb:kbd_backlight",
@@ -35,9 +36,13 @@ export class KeyboardBacklightListener {
     protected sysDBusUPowerKbdBacklightInterface: dbus.ClientInterface = {} as dbus.ClientInterface;
     protected onStartRetryCount: number = 5;
 
-    constructor(private tccd: TuxedoControlCenterDaemon) {
+    constructor(tccd: TuxedoControlCenterDaemon) {
+        super(tccd);
+
         this.init();
     }
+
+    public onActiveProfileChanged(): void {}
 
     private async init() {
         this.updateKeyboardBacklightCapabilities();
@@ -286,7 +291,16 @@ export class KeyboardBacklightListener {
                                              updateSettings: boolean = true,
                                              updateTCC: boolean = true): Promise<void> {
         if (updateSysFS) {
-            await this.sysDBusUPowerKbdBacklightInterface.SetBrightness(keyboardBacklightStatesNew[0].brightness);
+            try {
+                await this.sysDBusUPowerKbdBacklightInterface.SetBrightness(keyboardBacklightStatesNew[0].brightness);
+            } catch (error) {
+                if (error.name === "DBusError") {
+                    console.log("Failed to write brightness using UPower: Try restarting upower.service followed by tccd.service using systemctl.")
+                }
+                else {
+                    throw error;
+                }
+            }
 
             if (this.ledsRGBZones.length > 0) {
                 this.setBufferInput(this.ledsRGBZones[0], true)
@@ -300,7 +314,7 @@ export class KeyboardBacklightListener {
                 }
             }
             if (this.ledsRGBZones.length > 0) {
-                this.setBufferInput(this.ledsRGBZones[0], false)
+                this.setBufferInput(this.ledsRGBZones[0], false);
             }
         }
 

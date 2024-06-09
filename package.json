@@ -1,7 +1,7 @@
 {
   "name": "tuxedo-control-center",
   "description": "TUXEDO Control Center Application",
-  "version": "2.1.7-commown2",
+  "version": "2.1.10-commown1",
   "main": "./dist/tuxedo-control-center/e-app/e-app/main.js",
   "author": {
     "name": "TUXEDO Computers GmbH",
@@ -34,6 +34,7 @@
     "copy-udev-rule": "cp ./src/udev/99-webcam.rules ./dist/tuxedo-control-center/data/dist-data",
     "electron-builder": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' ts-node ./build-src/electron-builder.ts",
     "pack": "run-s build && npm run electron-builder",
+    "build-release": "TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' ts-node ./build-src/build-release.ts",
     "pack-prod": "run-s build-prod && npm run electron-builder",
     "clean": "rm -rf ./dist; rm -rf ./build; rm -rf ./usr",
     "tests": "npm run test-common && npm run test-appstream",

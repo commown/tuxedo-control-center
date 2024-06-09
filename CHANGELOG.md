@@ -1,5 +1,51 @@
 # Changelog
 
+## [2.1.10] - 2024-06-05
+### Added
+- Pulse Gen3 & Gen4 dashboard iGPU support
+- Pulse Gen4 power profile changed to TDP value slider view at TCC Profile edit
+
+### Changed
+- Pulse Gen3 & Gen4 power profile TDP values adjusted according to firmware update
+
+### Fixed
+- Show hwmon based dashboard info even if fan control is not available
+
+## [2.1.9] - 2024-05-25
+### Added
+- NVIDIA cTGP (configurable TGP) adjustable per TCC profile for supported models
+  with this feature enabled
+- Enable Aquaris menu für Stellaris Gen6
+- Support for new PWM fan control
+
+### Fixed
+- Use device specific defaults for new profile
+- Build script touchups
+
+## [2.1.8] - 2024-04-03
+### Added
+- Support for Stellaris Intel Gen6
+- Alternative view of _profile edit => system profile_ displaying
+  power limit info instead of profile name, introduced for
+  Pulse Gen3
+- Alternative display of temperatures in fahrenheit switchable in Global settings
+
+### Changed
+- Critical temperature (aka minimum speed for high temperatures) of
+  fan control split into two ranges: from 80&deg;C 30% and from
+  90&deg;C 40%
+
+### Fixed
+- Irregular fan speed on wakeup or when disabling fan control,
+  sometimes manifesting as full fan on wakeup from suspend
+- Issue in on-demand mode keeping dGPU awake in certain cases even
+  after closing dashboard/GUI
+- Minor performance improvement fixes
+- Occasional crash on reload provoked through tuxedo-driver
+  package update
+- Occasional race condition stability fix when GUI loading before the tccd DBus
+  is initialized (manifesting as missing profiles in tray menu)
+
 ## [2.1.7] - 2024-02-22
 ### Fixed
 - Always restoring keyboard backlight brightness to zero after lid close
