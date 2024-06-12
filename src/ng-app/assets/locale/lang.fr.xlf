@@ -628,7 +628,7 @@
       </trans-unit>
       <trans-unit id="cProfMgrDetailsNVIDIAPowerCTRLLabel" datatype="html">
         <source>NVIDIA power control</source>
-        <target state="untranslated">NVIDIA power control</target>
+        <target state="translated">Control de puissance NVIDIA</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/ng-app/app/profile-details-edit/profile-details-edit.component.html</context>
           <context context-type="linenumber">773</context>
@@ -636,7 +636,7 @@
       </trans-unit>
       <trans-unit id="cProfMgrDetailsNVIDIAPowerCTRLCTGPLabel" datatype="html">
         <source>Configurable graphics power (cTGP)</source>
-        <target state="untranslated">Configurable graphics power (cTGP)</target>
+        <target state="translated">Contrôle de puissance graphique configurable (cTGP)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/ng-app/app/profile-details-edit/profile-details-edit.component.html</context>
           <context context-type="linenumber">777</context>
@@ -644,7 +644,7 @@
       </trans-unit>
       <trans-unit id="cProfMgrDetailsToggleTGPChartLabel" datatype="html">
         <source>Toggle TGP chart</source>
-        <target state="untranslated">Toggle TGP chart</target>
+        <target state="translated">Graphique TGP</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/ng-app/app/profile-details-edit/profile-details-edit.component.html</context>
           <context context-type="linenumber">819</context>
@@ -652,7 +652,7 @@
       </trans-unit>
       <trans-unit id="cProfMgrDetailsTGPChartCTGPLabel" datatype="html">
         <source>Configurable graphics power (cTGP)</source>
-        <target state="untranslated">Configurable graphics power (cTGP)</target>
+        <target state="translated">Contrôle de puissance graphique configurable (cTGP)</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/ng-app/app/profile-details-edit/profile-details-edit.component.html</context>
           <context context-type="linenumber">848</context>
@@ -660,7 +660,7 @@
       </trans-unit>
       <trans-unit id="cProfMgrDetailsTGPChartDBLabel" datatype="html">
         <source>Dynamic Boost range</source>
-        <target state="untranslated">Dynamic Boost range</target>
+        <target state="translated">Plage d'amplification dynamique</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/ng-app/app/profile-details-edit/profile-details-edit.component.html</context>
           <context context-type="linenumber">849</context>
@@ -668,7 +668,7 @@
       </trans-unit>
       <trans-unit id="cProfMgrDetailsTGPChartMaxLimitLabel" datatype="html">
         <source>Maximum power limit (<x id="INTERPOLATION" equiv-text="{{ nvidiaPowerCTRLMaxPowerLimit }}"/> W)</source>
-        <target state="untranslated">Maximum power limit (</target>
+        <target state="translated">Maximum de puissance (</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/ng-app/app/profile-details-edit/profile-details-edit.component.html</context>
           <context context-type="linenumber">850</context>
@@ -1012,7 +1012,7 @@ Numéro de registre commercial - Partie B du registre commercial 27755
       </trans-unit>
       <trans-unit id="cGlobalSettingsTemperatureDisplayHeader" datatype="html">
         <source>Temperature Display</source>
-        <target state="untranslated">Temperature Display</target>
+        <target state="translated">Affichage de la température</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/ng-app/app/global-settings/global-settings.component.html</context>
           <context context-type="linenumber">52</context>
@@ -1020,7 +1020,7 @@ Numéro de registre commercial - Partie B du registre commercial 27755
       </trans-unit>
       <trans-unit id="cGlobalSettingsTemperatureDisplayActivated" datatype="html">
         <source>Celsius</source>
-        <target state="untranslated">Celsius</target>
+        <target state="translated">Celsius</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/ng-app/app/global-settings/global-settings.component.html</context>
           <context context-type="linenumber">57</context>
@@ -1032,7 +1032,7 @@ Numéro de registre commercial - Partie B du registre commercial 27755
       </trans-unit>
       <trans-unit id="cGlobalSettingsTemperatureDisplayDeactivated" datatype="html">
         <source>Fahrenheit</source>
-        <target state="untranslated">Fahrenheit</target>
+        <target state="translated">Fahrenheit</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/ng-app/app/global-settings/global-settings.component.html</context>
           <context context-type="linenumber">59</context>
@@ -1044,7 +1044,7 @@ Numéro de registre commercial - Partie B du registre commercial 27755
       </trans-unit>
       <trans-unit id="cGlobalSettingsTemperatureDisplayDescription" datatype="html">
         <source>Switch between Celsius and Fahrenheit </source>
-        <target state="untranslated">Switch between Celsius and Fahrenheit </target>
+        <target state="translated">Basculer entre Celsius et Fahrenheit</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/ng-app/app/global-settings/global-settings.component.html</context>
           <context context-type="linenumber">74,75</context>
