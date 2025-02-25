@@ -528,8 +528,12 @@ export class TuxedoControlCenterDaemon extends SingleProcess {
         dmiSKUDeviceMap.set('STELLARIS1XA05', TUXEDODevice.STELLARIS1XA05);
         dmiSKUDeviceMap.set('STELLARIS16I06', TUXEDODevice.STELLARIS16I06);
         dmiSKUDeviceMap.set('STELLARIS17I06', TUXEDODevice.STELLARIS17I06);
+        dmiSKUDeviceMap.set('STELLSL15A06', TUXEDODevice.STELLSL15A06);
+        dmiSKUDeviceMap.set('STELLSL15I06', TUXEDODevice.STELLSL15I06);
         dmiSKUDeviceMap.set('AURA14GEN3', TUXEDODevice.AURA14G3);
         dmiSKUDeviceMap.set('AURA15GEN3', TUXEDODevice.AURA15G3);
+        dmiSKUDeviceMap.set('SIRIUS1601', TUXEDODevice.SIRIUS1601);
+        dmiSKUDeviceMap.set('SIRIUS1602', TUXEDODevice.SIRIUS1602);
 
         const skuMatch = dmiSKUDeviceMap.get(productSKU);
 

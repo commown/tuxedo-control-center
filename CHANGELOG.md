@@ -1,5 +1,40 @@
 # Changelog
 
+## [2.1.16] - 2024-12-18
+### Changed
+- Descriptive text when no keyboard backlight control is found updated to reflect current
+  expectation on driver and kernel versions
+
+### Fixed
+- Various amd-pstate related issues known to happen when limiting CPU frequency in different
+  ways, modified to comply with current kernel feature behaviour
+  and to workaround current kernel bugs
+
+## [2.1.15] - 2024-12-09
+### Added
+- Aquaris support for missing Stellaris 16 Gen6 variants
+
+## [2.1.14] - 2024-11-18
+### Added
+- Temperature readout from alternative Sirius interface (prep for fan control support)
+
+### Changed
+- Crypt password change adjustments, now allows up to 512 characters
+
+## [2.1.13] - 2024-08-05
+### Fixed
+- Various cases of where, sometimes, power limit sliders would
+  prevent actually saving TCC-profile even though it looked like it
+  had been saved
+
+## [2.1.12] - 2024-07-04
+### Fixed
+- TCC GUI with Aquaris does not start when using Aquaris tray menu entry
+
+## [2.1.11] - 2024-06-11
+### Fixed
+- Packaging would in some cases produce hard links
+
 ## [2.1.10] - 2024-06-05
 ### Added
 - Pulse Gen3 & Gen4 dashboard iGPU support
@@ -15,7 +50,7 @@
 ### Added
 - NVIDIA cTGP (configurable TGP) adjustable per TCC profile for supported models
   with this feature enabled
-- Enable Aquaris menu für Stellaris Gen6
+- Enable Aquaris menu for Stellaris Gen6
 - Support for new PWM fan control
 
 ### Fixed
