@@ -50,17 +50,23 @@ export class CompatibilityService {
             (boardVendor !== undefined &&
                 boardVendor.toLowerCase().includes("pcspecialist")) ||
             (boardVendor !== undefined &&
+                boardVendor.toLowerCase().includes("ekimia")) ||
+            (boardVendor !== undefined &&
                 boardVendor.toLowerCase().includes("whyopencomputing")) ||
             (chassisVendor !== undefined &&
                 chassisVendor.toLowerCase().includes("tuxedo")) ||
             (chassisVendor !== undefined &&
                 chassisVendor.toLowerCase().includes("pcspecialist")) ||
             (chassisVendor !== undefined &&
+                chassisVendor.toLowerCase().includes("ekimia")) ||
+            (chassisVendor !== undefined &&
                 chassisVendor.toLowerCase().includes("whyopencomputing")) ||
             (sysVendor !== undefined &&
                 sysVendor.toLowerCase().includes("tuxedo")) ||
             (sysVendor !== undefined &&
                 sysVendor.toLowerCase().includes("pcspecialist")) ||
+            (sysVendor !== undefined &&
+                sysVendor.toLowerCase().includes("ekimia")) ||
             (sysVendor !== undefined &&
                 sysVendor.toLowerCase().includes("whyopencomputing"));
 
