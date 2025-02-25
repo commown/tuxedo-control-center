@@ -1340,8 +1340,9 @@ Numéro de registre commercial - Partie B du registre commercial 27755
         </context-group>
       </trans-unit>
       <trans-unit id="cKeyboardBacklightNotSupported" datatype="html">
-        <source>Your device has no keyboard backlight, is not (yet) supported by this control interface, or the driver is too old. At least tuxedo-keyboard 3.2.0 or tuxedo-keyboard-ite 0.3.0 respectively and Linux kernel 5.9 are required for most devices (some devices need newer versions). If you are using Ubuntu 20.04 or earlier or an old version of TUXEDO OS based on it, these driver versions do not get installed automatically.</source>
-        <target state="translated">Votre appareil n'a pas de clavier rétro-éclairé, n'est pas (encore) pris en charge par cette interface de contrôle, ou le driver n'est pas à jour. Sur la plupart des appareils les versions minimales requises sont la 3.2.0 pour tuxedo-keyboard ou la 0.3.0 de tuxedo-keyboard-ite et la 5.9 pour le noyau Linux (quelques appareils requièrent des versions encore plus récentes). Si vous utilisez Ubuntu 20.04 ou plus ancienne ou une ancienne version de TUXEDO OS basée sur elle, ces versions des drivers ne sont pas installées automatiquement.</target>
+        <source>Your device has no keyboard backlight, is not (yet) supported by this control interface, or the driver is too old. At least tuxedo-drivers 4.0.0 and Linux kernel 5.15 are required for most devices (some devices need newer versions).</source>
+	<target state="translated">Votre appareil n'a pas de clavier rétro-éclairé, n'est pas (encore) pris en charge par cette interface de contrôle, ou le driver n'est pas à jour. Sur la plupart des appareils les versions minimales requises sont la 4.0.0 pour tuxedo-drivers et la 5.15 pour le noyau Linux (quelques appareils requièrent des versions encore plus récentes).</target>
+
         <context-group purpose="location">
           <context context-type="sourcefile">src/ng-app/app/keyboard-backlight/keyboard-backlight.component.html</context>
           <context context-type="linenumber">47,51</context>
