@@ -96,6 +96,7 @@ def read_xlf_t10ns_at(xlf_fpath, version, prefix):
     try:
         fpath = git_extract(xlf_fpath, version, prefix)
     except subprocess.CalledProcessError:
+        print("... returning empty translation list")
         return {}
     else:
         return read_xlf_t10ns(fpath)
@@ -127,38 +128,27 @@ def main(base_fpath, commown_vers, tuxedo_vers, raise_on_conflict=False):
             tu_id = tu.get("id")
             source_node = tu.xpath("./a:source", namespaces=nsmap)[0]
             source = _to_str(source_node)
+            target = None
 
             if tu_id in common_tu_ids:
                 merged_source = merge(
                     "s", tu_id, commown_xlf, tuxedo_xlf, ancestor_xlf, lang,
                 )
-                if source != merged_source:
-                    raise ValueError(
-                        "Source error for %s (lang %s)" % (tu_id, lang)
+                if source == merged_source:
+                    t10n = merge(
+                        "t", tu_id, commown_xlf, tuxedo_xlf, ancestor_xlf, lang,
                     )
-
-                t10n = merge(
-                    "t", tu_id, commown_xlf, tuxedo_xlf, ancestor_xlf, lang,
-                )
-                target = etree.fromstring(t10n)
+                    target = etree.fromstring(t10n)
 
             elif tu_id in commown_xlf:
                 if source == commown_xlf[tu_id]["s"]:
                     target = etree.fromstring(commown_xlf[tu_id]["t"])
-                else:
-                    raise ValueError(
-                        "Source of msg %s changed from Commown (lang %s)"
-                        % (tu_id, lang)
-                    )
+
             elif tu_id in tuxedo_xlf:
                 if source == tuxedo_xlf[tu_id]["s"]:
                     target = etree.fromstring(tuxedo_xlf[tu_id]["t"])
-                else:
-                    raise ValueError(
-                        "Source of msg %s changed from Tuxedo (lang %s)"
-                        % (tu_id, lang)
-                    )
-            else:
+
+            if target is None:
                 target = etree.Element("target", state="untranslated")
                 target.text = source_node.text
 
