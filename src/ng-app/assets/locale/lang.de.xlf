@@ -2,7 +2,7 @@
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
   <file source-language="en-US" datatype="plaintext" original="ng2.template" target-language="de">
     <body>
-      <trans-unit id="cProfMgrInvalidNameTitle" datatype="html">
+      <trans-unit id="cProfMgrInvalidNameTitle" datatype="html" approved="yes">
         <source>Invalid input</source>
         <target phase-name="approval-1" state="signed-off">Ungültige Eingabe</target>
         <context-group purpose="location">
@@ -1341,8 +1341,8 @@ Handelsregisternummer HRB 27755
         </context-group>
       </trans-unit>
       <trans-unit id="cKeyboardBacklightNotSupported" datatype="html">
-        <source>Your device has no keyboard backlight, is not (yet) supported by this control interface, or the driver is too old. At least tuxedo-drivers 4.0.0 and Linux kernel 5.15 are required for most devices (some devices need newer versions).</source>
-        <target phase-name="approval-1" state="translated">Dein Gerät hat keine Tastaturbeleuchtung, ist (noch) nicht mit dieser Steuerungsoberfläche kompatibel oder der Treiber ist zu alt. Mindestens tuxedo-drivers 4.0.0 und Linux Kernel 5.15 werden benötigt (manche Geräte brauchen neuere Versionen).</target>
+        <source>Your device is not (yet) supported by this control interface, or the driver is too old. At least tuxedo-drivers 4.0.0 and Linux kernel 5.15 are required for most devices (some devices need newer versions).</source>
+        <target phase-name="approval-1" state="translated">Ihr Gerät ist (noch) nicht mit dieser Steuerungsoberfläche kompatibel oder der Treiber ist zu alt. Mindestens tuxedo-drivers 4.0.0 und Linux Kernel 5.15 werden benötigt (manche Geräte brauchen neuere Versionen).</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/ng-app/app/keyboard-backlight/keyboard-backlight.component.html</context>
           <context context-type="linenumber">47,51</context>
@@ -2506,7 +2506,7 @@ Handelsregisternummer HRB 27755
         </context-group>
       </trans-unit>
       <trans-unit id="chargingPriorityChargeBatteryLabel" datatype="html">
-        <source>Priorize battery charging speed</source>
+        <source>Prioritize battery charging speed</source>
         <target state="translated">Akku schnell laden</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/ng-app/app/charging-settings/charging-settings.component.ts</context>
@@ -2514,7 +2514,7 @@ Handelsregisternummer HRB 27755
         </context-group>
       </trans-unit>
       <trans-unit id="chargingPriorityPerformanceLabel" datatype="html">
-        <source>Priorize performance</source>
+        <source>Prioritize performance</source>
         <target state="translated">Beste Leistung</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/ng-app/app/charging-settings/charging-settings.component.ts</context>
@@ -2522,7 +2522,7 @@ Handelsregisternummer HRB 27755
         </context-group>
       </trans-unit>
       <trans-unit id="chargingPriorityChargeBatteryDescription" datatype="html">
-        <source>Fast battery charging is priorized at the expense of system performance. Once the battery is charged, full performance is available.</source>
+        <source>Fast battery charging is prioritized at the expense of system performance. Once the battery is charged, full performance is available.</source>
         <target state="translated">Die schnelle Aufladung des Akkus hat Vorrang zulasten der Systemleistung. Sobald der Akku aufgeladen ist, steht die volle Systemleistung zur Verfügung.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/ng-app/app/charging-settings/charging-settings.component.ts</context>
@@ -2530,7 +2530,7 @@ Handelsregisternummer HRB 27755
         </context-group>
       </trans-unit>
       <trans-unit id="chargingPriorityPerformanceDescription" datatype="html">
-        <source>Performance is priorized over battery charging speed. Under high system load charging speed is reduced for best performance. At low loads full charging speed is available.</source>
+        <source>Performance is prioritized over battery charging speed. Under high system load charging speed is reduced for best performance. At low loads full charging speed is available.</source>
         <target state="translated">Die Leistung des PCs hat Vorrang vor der Aufladegeschwindigkeit. Unter hoher Last ist die Ladegeschwindigkeit zugunsten maximaler Leistung verringert; Bei geringer Last steht die volle Ladegeschwindigkeit zur Verfügung.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/ng-app/app/charging-settings/charging-settings.component.ts</context>
