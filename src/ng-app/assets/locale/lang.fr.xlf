@@ -3046,7 +3046,7 @@ Numéro de registre commercial - Partie B du registre commercial 27755
       </trans-unit>
       <trans-unit id="webcamHue" datatype="html">
         <source>Hue</source>
-        <target state="translated">Teine</target>
+        <target state="translated">Teinte</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/ng-app/app/webcam-settings/webcam-settings.component.ts</context>
           <context context-type="linenumber">1351</context>
